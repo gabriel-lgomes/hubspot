@@ -19,15 +19,12 @@ const HubSpotForm = () => {
       name: formData.name,
     };
 
-    const HUBSPOT_PRIVATE_APP_TOKEN =
-      "pat-na1-ade213be-6aa5-4288-ba4e-26ec49f0716a";
-
     try {
       const response = await axios.post(
         `https://api.hubapi.com/crm/v3/objects/contacts`,
         {
           headers: {
-            Authorization: `Bearer ${HUBSPOT_PRIVATE_APP_TOKEN}`,
+            Authorization: `Bearer pat-na1-ade213be-6aa5-4288-ba4e-26ec49f0716a`,
             "Content-Type": "application/json",
           },
           properties: {
