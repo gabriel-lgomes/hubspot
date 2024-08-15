@@ -21,27 +21,12 @@ const HubSpotForm = () => {
 
     console.log(data);
 
-    try {
-      const response = await axios.get(
-        `https://api.hubapi.com/crm/v3/objects/contacts`,
-        {
-          properties: {
-            email: "gabriel_lopes.g@hotmail.com",
-            firstname: "Gabriel",
-            lastname: "Lopes",
-          },
-        },
-        {
-          headers: {
-            Authorization: `Bearer pat-na1-ade213be-6aa5-4288-ba4e-26ec49f0716a`,
-            "Content-Type": "application/json",
-          },
-        }
-      );
-      console.log("Dados enviados com sucesso para o HubSpot:", response);
-    } catch (error) {
-      console.error("Erro ao enviar dados para o HubSpot:", error);
-    }
+    axios.get("https://api.hubapi.com/crm/v3/objects/contacts", {
+      headers: {
+        Authorization: `Bearer pat-na1-ade213be-6aa5-4288-ba4e-26ec49f0716a`,
+        "Content-Type": "application/json",
+      },
+    });
   };
 
   return (
