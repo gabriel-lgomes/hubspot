@@ -21,12 +21,16 @@ const HubSpotForm = () => {
 
     console.log(data);
 
-    axios.get("https://api.hubapi.com/crm/v3/objects/contacts", {
-      headers: {
-        Authorization: `Bearer pat-na1-ade213be-6aa5-4288-ba4e-26ec49f0716a`,
-        "Content-Type": "application/json",
-      },
-    });
+    axios.get(
+      "https://api.hubapi.com/crm/v3/objects/contacts",
+
+      {
+        headers: {
+          Authorization: `Bearer pat-na1-ade213be-6aa5-4288-ba4e-26ec49f0716a`,
+          "Content-Type": "application/json",
+        },
+      }
+    );
   };
 
   return (
