@@ -22,7 +22,7 @@ const HubSpotForm = () => {
     console.log(data);
 
     try {
-      const response = await axios.post(
+      const response = await axios.get(
         `https://api.hubapi.com/crm/v3/objects/contacts`,
         {
           properties: {
