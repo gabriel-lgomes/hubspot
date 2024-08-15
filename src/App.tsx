@@ -19,6 +19,8 @@ const HubSpotForm = () => {
       name: formData.name,
     };
 
+    console.log(data);
+
     try {
       const response = await axios.post(
         `https://api.hubapi.com/crm/v3/objects/contacts`,
