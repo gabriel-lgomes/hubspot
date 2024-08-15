@@ -5,7 +5,6 @@ const HubSpotForm = () => {
   const [formData, setFormData] = useState({
     email: "",
     name: "",
-    // adicione outros campos do formulário aqui
   });
 
   const handleChange = (e: any) => {
